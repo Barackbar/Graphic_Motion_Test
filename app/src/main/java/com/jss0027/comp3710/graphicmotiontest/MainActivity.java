@@ -50,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
             public void run() {
                 mHandler.obtainMessage(1).sendToTarget();
             }
-        }, 0, 2000);
+        }, 0, 300);
     }
 
     @Override

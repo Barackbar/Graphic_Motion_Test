@@ -21,15 +21,17 @@ public class ViewThing extends View {
 
     public ViewThing(Context context) {
         super(context);
-        x = 50;
-        y = 50;
+        x = 100;
+        y = 100;
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        x += 50;
-        y += 50;
+        x += 20;
+        y += 20;
+        //first drawn bottom layer, last drawn top layer
+        canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.frog1), -x, -y, new Paint());
         canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.frog1), x, y, new Paint());
         Log.i("viewThing", "canvas draw bitmap called");
     }
